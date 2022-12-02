@@ -2,8 +2,8 @@ package study.jpastudy.config.auth.dto;
 
 import lombok.Builder;
 import lombok.Getter;
+import study.jpastudy.domain.user.MyUser;
 import study.jpastudy.domain.user.Role;
-import study.jpastudy.domain.user.User;
 
 import java.util.Map;
 
@@ -41,8 +41,8 @@ public class OAuthAttributes {
 
     // OAuthAttributes에서 엔티티를 생성하는 시점은 처음 가입할 때.
     // 가입할 때의 기본 권한은 GUEST로 주었다.
-    public User toEntity(){
-        return User.builder()
+    public MyUser toEntity(){
+        return MyUser.builder()
                 .name(name)
                 .email(email)
                 .picture(picture)

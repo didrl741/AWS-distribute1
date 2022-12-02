@@ -11,7 +11,7 @@ import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.stereotype.Service;
 import study.jpastudy.config.auth.dto.OAuthAttributes;
 import study.jpastudy.config.auth.dto.SessionUser;
-import study.jpastudy.domain.user.User;
+import study.jpastudy.domain.user.MyUser;
 import study.jpastudy.domain.user.UserRepository;
 
 import javax.servlet.http.HttpSession;
@@ -39,21 +39,21 @@ public class CustomOAuth2UserService implements OAuth2UserService<OAuth2UserRequ
         // 이후 네이버 드 다른 소셜 로그인도 이 클래스 사용.
         OAuthAttributes attributes = OAuthAttributes.of(registrationId, userNameAttributeName, oAuth2User.getAttributes());
 
-        User user = saveOrUpdate(attributes);
+        MyUser myUser = saveOrUpdate(attributes);
 
         // SessionUser: 세션에 사용자 정보를 저장하기 위한 Dto 클래스.
-        httpSession.setAttribute("user", new SessionUser(user));
+        httpSession.setAttribute("user", new SessionUser(myUser));
 
-        return new DefaultOAuth2User(Collections.singleton(new SimpleGrantedAuthority(user.getRoleKey())),
+        return new DefaultOAuth2User(Collections.singleton(new SimpleGrantedAuthority(myUser.getRoleKey())),
                 attributes.getAttributes(),
                 attributes.getNameAttributeKey());
     }
 
-    private User saveOrUpdate(OAuthAttributes attributes){
-        User user = userRepository.findByEmail(attributes.getEmail())
+    private MyUser saveOrUpdate(OAuthAttributes attributes){
+        MyUser myUser = userRepository.findByEmail(attributes.getEmail())
                 .map(entity -> entity.update(attributes.getName(), attributes.getPicture()))
                 .orElse(attributes.toEntity());
 
-        return userRepository.save(user);
+        return userRepository.save(myUser);
     }
 }

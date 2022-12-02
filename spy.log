@@ -20,7 +20,7 @@
 1668957789122|0|statement|connection 28|url jdbc:h2:mem:testdb|drop table if exists orders|drop table if exists orders
 1668957789122|0|statement|connection 28|url jdbc:h2:mem:testdb|drop table if exists posts|drop table if exists posts
 1668957789122|0|statement|connection 28|url jdbc:h2:mem:testdb|drop table if exists team|drop table if exists team
-1668957789122|0|statement|connection 28|url jdbc:h2:mem:testdb|drop table if exists user|drop table if exists user
+1668957789122|0|statement|connection 28|url jdbc:h2:mem:testdb|drop table if exists myUser|drop table if exists myUser
 1669025454869|0|statement|connection 25|url jdbc:h2:mem:88776fbe-ae37-4479-a128-9233fd1bfc12|alter table address drop foreign key FKcnw0s8hudme00qu71e3mqd5ih|alter table address drop foreign key FKcnw0s8hudme00qu71e3mqd5ih
 1669025454870|0|statement|connection 25|url jdbc:h2:mem:88776fbe-ae37-4479-a128-9233fd1bfc12|alter table album drop foreign key FKminb9nib0bo4t9c4kpltxtuab|alter table album drop foreign key FKminb9nib0bo4t9c4kpltxtuab
 1669025454870|0|statement|connection 25|url jdbc:h2:mem:88776fbe-ae37-4479-a128-9233fd1bfc12|alter table book drop foreign key FKgohd8evkxf3j9a0p4jk5evpiv|alter table book drop foreign key FKgohd8evkxf3j9a0p4jk5evpiv
@@ -43,7 +43,7 @@
 1669025454874|0|statement|connection 25|url jdbc:h2:mem:88776fbe-ae37-4479-a128-9233fd1bfc12|drop table if exists orders|drop table if exists orders
 1669025454874|0|statement|connection 25|url jdbc:h2:mem:88776fbe-ae37-4479-a128-9233fd1bfc12|drop table if exists posts|drop table if exists posts
 1669025454874|0|statement|connection 25|url jdbc:h2:mem:88776fbe-ae37-4479-a128-9233fd1bfc12|drop table if exists team|drop table if exists team
-1669025454874|0|statement|connection 25|url jdbc:h2:mem:88776fbe-ae37-4479-a128-9233fd1bfc12|drop table if exists user|drop table if exists user
+1669025454874|0|statement|connection 25|url jdbc:h2:mem:88776fbe-ae37-4479-a128-9233fd1bfc12|drop table if exists myUser|drop table if exists myUser
 1669025705115|0|statement|connection 25|url jdbc:h2:mem:563de7b4-de0e-4851-bb17-78d1bea210cc|alter table address drop foreign key FKcnw0s8hudme00qu71e3mqd5ih|alter table address drop foreign key FKcnw0s8hudme00qu71e3mqd5ih
 1669025705116|0|statement|connection 25|url jdbc:h2:mem:563de7b4-de0e-4851-bb17-78d1bea210cc|alter table album drop foreign key FKminb9nib0bo4t9c4kpltxtuab|alter table album drop foreign key FKminb9nib0bo4t9c4kpltxtuab
 1669025705116|0|statement|connection 25|url jdbc:h2:mem:563de7b4-de0e-4851-bb17-78d1bea210cc|alter table book drop foreign key FKgohd8evkxf3j9a0p4jk5evpiv|alter table book drop foreign key FKgohd8evkxf3j9a0p4jk5evpiv
@@ -66,4 +66,4 @@
 1669025705118|0|statement|connection 25|url jdbc:h2:mem:563de7b4-de0e-4851-bb17-78d1bea210cc|drop table if exists orders|drop table if exists orders
 1669025705118|0|statement|connection 25|url jdbc:h2:mem:563de7b4-de0e-4851-bb17-78d1bea210cc|drop table if exists posts|drop table if exists posts
 1669025705118|0|statement|connection 25|url jdbc:h2:mem:563de7b4-de0e-4851-bb17-78d1bea210cc|drop table if exists team|drop table if exists team
-1669025705118|0|statement|connection 25|url jdbc:h2:mem:563de7b4-de0e-4851-bb17-78d1bea210cc|drop table if exists user|drop table if exists user
+1669025705118|0|statement|connection 25|url jdbc:h2:mem:563de7b4-de0e-4851-bb17-78d1bea210cc|drop table if exists myUser|drop table if exists myUser

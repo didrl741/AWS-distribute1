@@ -1,7 +1,7 @@
 package study.jpastudy.config.auth.dto;
 
 import lombok.Getter;
-import study.jpastudy.domain.user.User;
+import study.jpastudy.domain.user.MyUser;
 
 import java.io.Serializable;
 
@@ -12,9 +12,9 @@ public class SessionUser implements Serializable {
     private String email;
     private String picture;
 
-    public SessionUser(User user) {
-        this.name = user.getName();
-        this.email = user.getEmail();
-        this.picture = user.getPicture();
+    public SessionUser(MyUser myUser) {
+        this.name = myUser.getName();
+        this.email = myUser.getEmail();
+        this.picture = myUser.getPicture();
     }
 }
