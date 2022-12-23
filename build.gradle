@@ -47,13 +47,16 @@ dependencies {
 	implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity5'
 
 	// for db session 연동
-	implementation 'org.springframework.session:spring-session-jdbc'
+	// implementation 'org.springframework.session:spring-session-jdbc'
 
 	// for security가 적용된 test
 	testImplementation 'org.springframework.security:spring-security-test'
 
 	//h2
 	runtimeOnly 'com.h2database:h2'
+
+	// mariaDB
+	runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
 }
 
 tasks.named('test') {
