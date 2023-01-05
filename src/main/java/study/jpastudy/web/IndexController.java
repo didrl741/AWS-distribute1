@@ -51,4 +51,12 @@ public class IndexController {
         postsService.save(postsSaveRequestDto);
         return "redirect:/";
     }
+
+    // 조회. @RequestBody 없다.
+    @GetMapping("/api/v2/posts/all")
+    public String findAll(Model model)
+    {
+        model.addAttribute("findAll", postsService.findAll());
+        return "showAll";
+    }
 }

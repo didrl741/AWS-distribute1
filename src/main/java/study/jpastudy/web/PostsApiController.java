@@ -1,6 +1,7 @@
 package study.jpastudy.web;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import study.jpastudy.service.posts.PostsService;
 import study.jpastudy.web.dto.PostsResponseDto;
@@ -31,9 +32,6 @@ public class PostsApiController {
         return postsService.findById(id);
     }
 
-    // 조회. @RequestBody 없다.
-    @GetMapping("/api/v2/posts/all")
-    public String findAll() {
-        return "hi";
-    }
+
+
 }

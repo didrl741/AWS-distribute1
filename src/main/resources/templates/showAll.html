@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+    <div>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>제목</th>
+                <th>내용</th>
+                <th>저자</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="post : ${findAll}">
+
+                <td th:text="${post.title}" ></td>
+                <td th:text="${post.content}" ></td>
+                <td th:text="${post.author}" ></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+</div>
+</body>
+</html>
