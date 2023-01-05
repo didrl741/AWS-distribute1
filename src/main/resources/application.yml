@@ -27,10 +27,10 @@ spring:
   profiles:
     include: oauth
 
-  thymeleaf:
-    prefix: classpath:templates/thymeleaf/
-    suffix: .html
-    cache: false
+#  thymeleaf:
+#    prefix: classpath:templates/thymeleaf/
+#    suffix: .html
+#    cache: false
 
 # 파라미터 확인을 위한 trace
 logging:
