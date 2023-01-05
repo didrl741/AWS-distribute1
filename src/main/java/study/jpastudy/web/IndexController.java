@@ -45,12 +45,10 @@ public class IndexController {
         return "posts-save";
     }
 
-    @PostMapping("/posts/save")
+    @PostMapping("/api/v1/posts/save")
     public String create(PostsSaveRequestDto postsSaveRequestDto
             /*@AuthenticationPrincipal SessionUser user */) throws Exception {
-
         postsService.save(postsSaveRequestDto);
-
         return "redirect:/";
     }
 }

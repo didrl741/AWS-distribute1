@@ -31,7 +31,7 @@ public class SecurityConfig {
                 .authorizeRequests() // URL별 권한 관리를 설정하는 옵션의 시작점. 이제 antMatchers 옵션들 사용 가능
                 // antMatchers: 권한 관리 대상 지정. URL, HTTP 메소드별로 관리 가능.
                 .antMatchers("/", "/css/**", "/images/**", "/js/**", "/h2-console/**", "/api/v2/**").permitAll() // 전체 열람 권한
-                .antMatchers("/api/v1/**").hasRole(Role.USER.name()) // USER만 가능
+//                .antMatchers("/api/v1/**").hasRole(Role.USER.name()) // USER만 가능. GUEST는 불가능하네?
                 .anyRequest() // 설정된 값들 이외 나머지 URL들.
                 .authenticated() // 그 URL들은 모두 인증된 사용자들에게만 허용. (로그인한 사용자)
                 .and()
